@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <form [formGroup]="formGroupEstudante">
+      <div class="mb-3">
+        <div class="display-6 text-center p-3">Cadastro de Estudantes</div>
+        <label for="name" class="form-label">Nome: </label>
+        <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome completo">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" formControlName="email" class="form-control" id="email" placeholder="Digite seu email">
+      </div>
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Telefone:</label>
+        <input type="phoneNumber" formControlName="phoneNumber" class="form-control" id="phoneNumber" placeholder="Digite seu telefone">
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Endereço:</label>
+        <input type="address" formControlName="address" class="form-control" id="address" placeholder="Digite seu endereço">
+      </div>
+      <div class="mb-3">
+        <label for="course" class="form-label">Curso:</label>
+        <input type="course" formControlName="course" class="form-control" id="curso" placeholder="Digite seu curso">
+      </div>
+      <div class="mb-3 d-flex justify-content-end">
+        <button class="btn btn-primary me-1" (click)="save()">Salvar</button>
+        <button class="btn btn-danger" (click)="clean()">Limpar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<table class="table table-light table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Curso</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let estudante of estudante">
+      <th scope="row">{{estudante.id}}</th>
+      <td>{{estudante.name}}</td>
+      <td>{{estudante.email}}</td>
+      <td>{{estudante.phoneNumber}}</td>
+      <td>{{estudante.address}}</td>
+      <td>{{estudante.course}}</td>
+      <td>
+        <button class="btn btn-primary me-1" (click)="edit(estudante)">Editar</button>
+        <button class="btn btn-danger" (click)="remove(estudante)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

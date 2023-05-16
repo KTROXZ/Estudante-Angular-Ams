@@ -1,0 +1,28 @@
+{
+  "estudante": [
+    {
+      "id": 1,
+      "name": "Marcos Silva",
+      "email": "marcos@gmail.com",
+      "phoneNumber": "1199999-9999",
+      "address": "Alameda Vitória, Setor 03",
+      "course": "Administração"
+    },
+    {
+      "id": 2,
+      "name": "Julia Dos Santos",
+      "email": "julia@gmail.com",
+      "phoneNumber": "1199999-9999",
+      "address": "Quadra CLS 105 Bloco D, Asa Sul",
+      "course": "Desenvolvimento de Sistemas"
+    },
+    {
+      "id": 3,
+      "name": "José Marcio",
+      "email": "marcio@gmail.com",
+      "phoneNumber": "1194428-8930",
+      "address": "Rua Bento Custódio Machado, José Mendes",
+      "course": "Desenvolvimento de Sistemas"
+    }
+  ]
+}
